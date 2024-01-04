@@ -1,0 +1,36 @@
+@import url('../../App.module.css');
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.submitButton {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing);
+    word-spacing: 2px;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--dark-color);
+    padding: 20px;
+    cursor: pointer;
+    background-color: var(--light-color);
+    outline: 2px solid transparent;
+    transition: letter-spacing .2s ease-in-out, background-color .1s ease-in-out, color .1s ease-in-out;
+}
+
+.submitButton:active {
+    letter-spacing: calc(var(--letter-spacing) * 2);
+}
+
+.submitButton:focus,
+.submitButton:hover {
+    outline: 2px solid var(--light-color);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
