@@ -32,6 +32,14 @@ body {
     min-width: 350px;
 }
 
+.title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--light-color);
+    letter-spacing: var(--letter-spacing);
+}
+
 .hidden {
     display: none;
 }

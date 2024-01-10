@@ -17,20 +17,18 @@
     border: none;
     border-radius: var(--border-radius);
     color: var(--dark-color);
-    padding: 20px;
+    padding: 20px 15px;
     cursor: pointer;
     background-color: var(--light-color);
-    outline: 2px solid transparent;
-    transition: letter-spacing .2s ease-in-out, background-color .1s ease-in-out, color .1s ease-in-out;
-}
-
-.submitButton:active {
-    letter-spacing: calc(var(--letter-spacing) * 2);
+    outline: 3px solid transparent;
+    transition: letter-spacing .2s ease-in-out, outline .2s ease-in-out;
 }
 
 .submitButton:focus,
 .submitButton:hover {
-    outline: 2px solid var(--light-color);
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    outline: 3px solid var(--medium-color);
+}
+
+.submitButton:active {
+    letter-spacing: calc(var(--letter-spacing) * 2);
 }

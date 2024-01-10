@@ -1,26 +1,29 @@
 import styles from './Input.module.css';
+import { ErrorContainer } from '../errorContainer/ErrorContainer';
 
-export const Input = ({ type, name, placeholder, title }) => {
+export const Input = ({ type, name, inputTitle, placeholder }) => {
 	return (
-		<InputLayout type={type} name={name} placeholder={placeholder} title={title} />
+		<InputLayout
+			type={type}
+			name={name}
+			inputTitle={inputTitle}
+			placeholder={placeholder}
+		/>
 	);
 };
 
-const InputLayout = ({ type, name, placeholder, title }) => {
+const InputLayout = ({ type, name, inputTitle, placeholder, onChange }) => {
 	return (
-		<>
-			<label className={styles.label} htmlFor={name}>
-				<h2 className={styles.title}>{title}</h2>
-				<input
-					type={type}
-					name={name}
-					placeholder={placeholder}
-					className={styles.input}
-				/>
-				<div className={styles.errorContainer}>
-					<p className={styles.error}>допустимо не более 20 символов</p>
-				</div>
-			</label>
-		</>
+		<label className={styles.label}>
+			<h2 className={styles.inputTitle}>{inputTitle}</h2>
+			<input
+				className={styles.input}
+				type={type}
+				name={name}
+				placeholder={placeholder}
+				onChange={onChange}
+			/>
+			<ErrorContainer />
+		</label>
 	);
 };

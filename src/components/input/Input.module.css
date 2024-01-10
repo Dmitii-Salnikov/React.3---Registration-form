@@ -1,12 +1,14 @@
 @import url('../../App.module.css');
 
 .label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     position: relative;
     width: 100%;
 }
 
-.title {
-    margin-bottom: 5px;
+.inputTitle {
     padding-left: 10px;
     color: var(--light-color);
     font-size: 0.9rem;
@@ -18,7 +20,6 @@
     width: 100%;
     padding: 15px;
     background-color: var(--medium-color);
-    transition: outline .2s ease-in-out, background-color .2s ease-in-out;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 500;
@@ -28,6 +29,7 @@
     border-radius: var(--border-radius);
     color: var(--dark-color);
     outline: 3px solid transparent;
+    transition: outline .2s ease-in-out, background-color .2s ease-in-out;
 }
 
 .input::placeholder {
@@ -38,19 +40,4 @@
 .input:active,
 .input:focus {
     outline: 3px solid var(--light-color);
-}
-
-.errorContainer {
-    position: absolute;
-    top: 80px;
-    left: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.error {
-    font-size: 0.8rem;
-    color: var(--error-color);
 }
